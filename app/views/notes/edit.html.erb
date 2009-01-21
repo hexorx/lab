@@ -1,0 +1,40 @@
+<h1>Editing note</h1>
+
+<% form_for(@note) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :from_user_id %><br />
+    <%= f.text_field :from_user_id %>
+  </p>
+  <p>
+    <%= f.label :to_user_id %><br />
+    <%= f.text_field :to_user_id %>
+  </p>
+  <p>
+    <%= f.label :level %><br />
+    <%= f.text_field :level %>
+  </p>
+  <p>
+    <%= f.label :subject %><br />
+    <%= f.text_field :subject %>
+  </p>
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_field :body %>
+  </p>
+  <p>
+    <%= f.label :notable_type %><br />
+    <%= f.text_field :notable_type %>
+  </p>
+  <p>
+    <%= f.label :notable_id %><br />
+    <%= f.text_field :notable_id %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @note %> |
+<%= link_to 'Back', notes_path %>

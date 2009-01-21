@@ -1,0 +1,38 @@
+<p>
+  <b>From user:</b>
+  <%=h @note.from_user_id %>
+</p>
+
+<p>
+  <b>To user:</b>
+  <%=h @note.to_user_id %>
+</p>
+
+<p>
+  <b>Level:</b>
+  <%=h @note.level %>
+</p>
+
+<p>
+  <b>Subject:</b>
+  <%=h @note.subject %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @note.body %>
+</p>
+
+<p>
+  <b>Notable type:</b>
+  <%=h @note.notable_type %>
+</p>
+
+<p>
+  <b>Notable:</b>
+  <%=h @note.notable_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_note_path(@note) %> |
+<%= link_to 'Back', notes_path %>
