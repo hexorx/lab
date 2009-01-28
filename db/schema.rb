@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090121235531) do
+ActiveRecord::Schema.define(:version => 20090128215822) do
 
   create_table "notes", :force => true do |t|
     t.integer  "from_user_id"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(:version => 20090121235531) do
     t.integer  "notable_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "state"
+    t.datetime "read_at"
   end
 
   create_table "users", :force => true do |t|
