@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @frooble.name %>
+</p>
+
+<p>
+  <b>Color:</b>
+  <%=h @frooble.color %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @frooble.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_frooble_path(@frooble) %> |
+<%= link_to 'Back', froobles_path %>

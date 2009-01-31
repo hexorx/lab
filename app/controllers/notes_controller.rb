@@ -1,4 +1,6 @@
 class NotesController < ApplicationController
+  before_filter :find_user, :only => [:index]
+  
   # GET /notes
   # GET /notes.xml
   def index
@@ -81,5 +83,10 @@ class NotesController < ApplicationController
       format.html { redirect_to(notes_url) }
       format.xml  { head :ok }
     end
+  end
+  
+protected
+  def find_user
+    @user = User.find_by_login(params[:user_id])
   end
 end

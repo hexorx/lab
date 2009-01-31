@@ -1,0 +1,2 @@
+module FrooblesHelper
+end

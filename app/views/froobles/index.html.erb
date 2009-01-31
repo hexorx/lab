@@ -1,0 +1,24 @@
+<h1>Listing froobles</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Color</th>
+    <th>Description</th>
+  </tr>
+
+<% for frooble in @froobles %>
+  <tr>
+    <td><%=h frooble.name %></td>
+    <td><%=h frooble.color %></td>
+    <td><%=h frooble.description %></td>
+    <td><%= link_to 'Show', frooble %></td>
+    <td><%= link_to 'Edit', edit_frooble_path(frooble) %></td>
+    <td><%= link_to 'Destroy', frooble, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New frooble', new_frooble_path %>

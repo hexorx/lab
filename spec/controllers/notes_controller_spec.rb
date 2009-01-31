@@ -10,7 +10,7 @@ describe NotesController do
 
     it "should expose all notes as @notes" do
       Note.should_receive(:find).with(:all).and_return([mock_note])
-      get :index
+      get :index#, :user_id => 'bo'
       assigns[:notes].should == [mock_note]
     end
 

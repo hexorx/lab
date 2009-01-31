@@ -20,8 +20,8 @@
     <td><%=h note.body %></td>
     <td><%=h note.notable_type %></td>
     <td><%=h note.notable_id %></td>
-    <td><%= link_to 'Show', note %></td>
-    <td><%= link_to 'Edit', edit_note_path(note) %></td>
+    <td><%= link_to 'Show', user_note_path(@user) %></td>
+    <td><%= link_to 'Edit', edit_user_note_path(@user, note) %></td>
     <td><%= link_to 'Destroy', note, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
@@ -29,4 +29,4 @@
 
 <br />
 
-<%= link_to 'New note', new_note_path %>
+<%= link_to 'New note', new_user_note_path(@user) %>
