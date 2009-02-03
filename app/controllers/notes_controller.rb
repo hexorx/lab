@@ -1,5 +1,5 @@
 class NotesController < ApplicationController
-  before_filter :find_user, :only => [:index]
+  before_filter :find_user
   
   # GET /notes
   # GET /notes.xml
@@ -87,6 +87,6 @@ class NotesController < ApplicationController
   
 protected
   def find_user
-    @user = User.find_by_login(params[:user_id])
+    @user = User.find(params[:user_id])
   end
 end
